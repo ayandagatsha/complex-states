@@ -7,23 +7,40 @@ function App() {
   });
 
   function handleChange(event) {
-    const newValue = event.target.value;
-    const inputName = event.target.name;
+    const { value, name } = event.target;
 
     setFullName((prevValue) => {
-      if (inputName === "fName") {
+      if (name === "fName") {
         return {
-          firstName: newValue,
+          firstName: value,
           lastName: prevValue.lastName
         };
-      } else if (inputName === "lName") {
+      } else if (name === "lName") {
         return {
           firstName: prevValue.firstName,
-          lastName: newValue
+          lastName: value
         };
       }
     });
   }
+
+  // const newValue = event.target.value;
+  // const inputName = event.target.name;
+
+  //   setFullName((prevValue) => {
+  //     if (inputName === "fName") {
+  //       return {
+  //         firstName: newValue,
+  //         lastName: prevValue.lastName
+  //       };
+  //     } else if (inputName === "lName") {
+  //       return {
+  //         firstName: prevValue.firstName,
+  //         lastName: newValue
+  //       };
+  //     }
+  //   });
+  // }
 
   return (
     <div className="container">
