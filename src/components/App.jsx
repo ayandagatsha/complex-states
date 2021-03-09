@@ -18,8 +18,18 @@ function App() {
         Hello {firstName} {lastName}
       </h1>
       <form>
-        <input onChange={setFName} name="fName" placeholder="First Name" />
-        <input onChange={setLName} name="lName" placeholder="Last Name" />
+        <input
+          onChange={setFName}
+          value={firstName}
+          name="fName"
+          placeholder="First Name"
+        />
+        <input
+          onChange={setLName}
+          value={lastName}
+          name="lName"
+          placeholder="Last Name"
+        />
         <button>Submit</button>
       </form>
     </div>
